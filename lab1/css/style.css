@@ -1,0 +1,38 @@
+.heading ul {
+    list-style-type: none;
+    overflow: hidden;
+}
+.heading img{
+    width:80px;
+    height:100px;
+    border-radius:50%;
+    text-decoration: none;
+}
+.heading a {
+    text-decoration: none;
+    color: blue;
+    padding: 14px 16px;
+}
+.navbar ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: black;
+}
+
+.navbar ul li a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover {
+    background-color: green;
+}
+footer {
+    list-style-type: none;
+    bottom: 0;
+    background-color: gray;
+}

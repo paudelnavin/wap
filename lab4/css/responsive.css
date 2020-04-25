@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+.header{
+    display: flex;
+    background-color: lightblue;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer {
+    display: flex;
+    background-color: DarkSlateGray;
+    height: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.row{
+    height: 300px;
+}
+
+.footer > div {
+    font-size: 15px;
+    color: white;
+}
