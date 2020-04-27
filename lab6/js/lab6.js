@@ -156,3 +156,55 @@ function filterWords(enteredString, x){
         // result.innerText = "Please, enter an array of words separated by spaces!";
     }
 }
+
+/*
+Usage : test on the map/filter/reduce as follows:
+
+a) multiply each element by 10;
+
+b) return array with all elements equal to 3;
+
+c) return the product of all elements;
+
+and testing the console.assert.
+ */
+console.log("Modified the jsfiddle on the map/filter/reduce slide as follows:");
+console.log("==============================================================");
+console.log("a) multiply each element by 10 :");
+
+const a = [1, 3, 5, 3, 3];
+const b = a.map(function (elem, i, array) {
+    return elem * 10;
+})
+console.log(b);
+
+console.log("b) return array with all elements equal to 3 :");
+
+const c = a.filter(function (elem, i, array) {
+    return elem === 3;
+});
+console.log(c);
+
+console.log("c) return the product of all elements :");
+
+const d = a.reduce(function (prevValue, elem, i, array) {
+    return prevValue * elem;
+});
+console.log(d);
+
+const d2 = a.find(function (elem) {
+    return elem > 1;
+}); //3
+const d3 = a.findIndex(function (elem) {
+    return elem > 1;
+}); //1
+/*
+ Note : The following two assertions will failed. Its for testing purposes.
+ */
+console.log("The following two assertions will failed. Its for testing purposes.");
+console.assert(d2 === 0, {"find elem > 1": 1, errorMsg: "failed! should equal 3"});
+console.assert(d3 === 0, {"findIndex elem > 1": 2, errorMsg: "failed! should equal 1"});
+
+function wordLongerThan(x, enteredi) {
+    return (x.length > parseInt(enteredi));
+}
