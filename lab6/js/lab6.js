@@ -67,48 +67,33 @@ function reverse(enteredString){
 
     if (enteredString.length >= 2) {
         window.alert("The reverse of " + enteredString + " is : " + enteredString.split("").reverse().join(""));
-        // result.innerText = "The reverse of " + enteredString + " is : " + enteredString.split("").reverse().join("");
-
     } else {
         if (enteredString.length == 1) {
             window.alert("The reverse is : " + enteredString.trim());
-            // result.innerText = "The reverse is : " + enteredString.trim();
         } else {
             window.alert("Please, enter any string!");
-            // result.innerText = "Please, enter any string!";
         }
 
     }
 }
 
-// function getBigger(big, num) {
-//     if (parseFloat(num) > parseFloat(big))
-//         return parseFloat(num);
-//     else
-//         return parseFloat(big);
-// }
-
 function longestWord(enteredString) {
 
-    const result = document.getElementById("findLongestWordResult");
-    if (enteredString.length >= 1) {
-        const results = enteredString.map(x => x.length);
-        result.className = "success";
+
+    var res = enteredString.trim().split(" ");
+    console.log(res);
+    if(res=="") {
+        window.alert("Please, enter an array of words separated by spaces!");
+    }else{
         var index = 0;
-        var elementLength = enteredString[0].length;
-        for(var i=1; i< enteredString.length; i++) {
-            if(enteredString[i].length > elementLength) {
+        var elementLength = res[0].length;
+        for(var i=1; i< res.length; i++) {
+            if(res[i].length > elementLength) {
                 index = i;
-                elementLength = enteredString[i].length;
+                elementLength = res[i].length;
             }
         }
-        window.alert("The longest word is  " + enteredString[index]);
-        // result.innerText = "The longest word is  " + results.reduce(getBigger, results[0]);
-
-    } else {
-        result.className = "failed";
-        window.alert("Please, enter an array of words separated by spaces!");
-        // result.innerText = "Please, enter an array of words separated by spaces!";
+        window.alert("The longest word is  " + res[index]);
     }
 }
 
@@ -184,4 +169,3 @@ console.assert(d3 === 0, {"findIndex elem > 1": 2, errorMsg: "failed! should equ
 function wordLongerThan(x, enteredi) {
     return (x.length > parseInt(enteredi));
 }
-s
