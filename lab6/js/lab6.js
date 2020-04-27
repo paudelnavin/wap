@@ -35,13 +35,9 @@ function isVowel(char) {
             }
 }
 
-function getSum(total, num) {
-    return parseFloat(total) + parseFloat(num);
-}
-
 function sum(numberArray){
 
-    var res = numberArray.trim().split("");
+    var res = numberArray.trim().split(" ");
     var sum =0;
     if (res.length >= 1) {
         for(var i=0; i<res.length; i++){
@@ -55,7 +51,7 @@ function sum(numberArray){
 
 function multiply(numberArray) {
 
-    var res = numberArray.trim().split("");
+    var res = numberArray.trim().split(" ");
     var product=1;
     if (res.length >= 1) {
         for(var i=0; i<res.length; i++){
