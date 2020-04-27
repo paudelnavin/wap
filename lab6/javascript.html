@@ -55,7 +55,6 @@
 
     <hr color="cyan">
     <br>
-    <form action="sum(document.getElementById('alphabet'))">
       <div>
         <label for="nu1">Number 1:</label>
         <input type="number" name="nu1" id="nu1" size="12" /><br>
@@ -67,17 +66,68 @@
         <input type="number" name="nu4" id="nu4" size="12" /><br>
         <label for="nu5">Number 5:</label>
         <input type="number" name="nu5" id="nu5" size="12" /><br>
-          <label for="nu6">Number 6:</label>
-          <input type="number" name="nu6" id="nu6" size="12" /><br>
-        <input type="submit" name="submit" value="Submit" />
+        <label for="nu6">Number 6:</label>
+        <input type="number" name="nu6" id="nu6" size="12" /><br>
       </div>
-    </form>
     <hr color="cyan">
+    <p id="result"></p>
+    <button onclick="document.getElementById('result').innerHTML=sum()">ADD</button>
+    <button onclick="document.getElementById('result').innerHTML=multiply()">Multiply</button>
 
     <h4>To find a reverse of a string using fucntion</h4>
-<h4>To find longest word from an array using fucntion</h4>
-<h4>To filter all long words as per user using function</h4>
-<h4>Modify the jsfiddle on the map/filter/reduce slide </h4>
+    <hr color="cyan">
+    <br>
+    <div class="form-group4">
+        <label for="string">Enter a string to reverse:</label>
+        <input type="text" id="string" data-bind="value:string"/>
+    </div>
+    <hr color="cyan">
+    <p id="result1"></p>
+    <button onclick="reverse(document.getElementById('result1').value)">Reverse</button>
+
+    <h4>To find longest word from an array using fucntion</h4>
+    <hr color="cyan">
+    <br>
+    <div>
+        <label for="str1">String 1:</label>
+        <input type="text" name="str1" id="str1" size="12" /><br>
+        <label for="str2">String 2:</label>
+        <input type="text" name="str2" id="str2" size="12" /><br>
+        <label for="str3">String 3:</label>
+        <input type="text" name="str3" id="str3" size="12" /><br>
+        <label for="str4">String 4:</label>
+        <input type="text" name="str4" id="str4" size="12" /><br>
+        <label for="str5">String 5:</label>
+        <input type="text" name="str5" id="str5" size="12" /><br>
+        <label for="str6">String 6:</label>
+        <input type="text" name="str6" id="str6" size="12" /><br>
+    </div>
+    <hr color="cyan">
+    <p id="result2"></p>
+    <button onclick="document.getElementById('result2').innerHTML=longestWord()">Longest word</button>
+
+    <h4>To filter all long words as per user using function</h4>
+    <hr color="cyan">
+    <br>
+    <div>
+        <label for="str7">String 1:</label>
+        <input type="text" name="str7" id="str7" size="12" /><br>
+        <label for="str8">String 2:</label>
+        <input type="text" name="str8" id="str8" size="12" /><br>
+        <label for="str9">String 3:</label>
+        <input type="text" name="str9" id="str9" size="12" /><br>
+        <label for="str10">String 4:</label>
+        <input type="text" name="str10" id="str10" size="12" /><br>
+        <label for="str11">String 5:</label>
+        <input type="text" name="str11" id="str11" size="12" /><br>
+        <label for="str12">String 6:</label>
+        <input type="text" name="str12" id="str12" size="12" /><br>
+    </div>
+    <hr color="cyan">
+    <p id="result3"></p>
+    <button onclick="document.getElementById('result3').innerHTML=totalStringsGreater()">Longest words array</button>
+
+    <h4>Modify the jsfiddle on the map/filter/reduce slide </h4>
 
 <script type="text/javascript" src="js/lab6.js">
 </script>
