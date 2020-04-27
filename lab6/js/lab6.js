@@ -41,45 +41,31 @@ function getSum(total, num) {
 
 function sum(numberArray){
 
-    var res = numberArray.split(" ");
+    var res = numberArray.trim().split("");
     var sum =0;
-    if (res.length >= 2) {
+    if (res.length >= 1) {
         for(var i=0; i<res.length; i++){
             sum =parseInt(sum)+parseInt(res[i]);
         }
         window.alert("The sum is : " + sum);
-
     } else {
-        if (res.length == 1) {
-            window.alert("The sum is : " + res[0].trim());
-        } else {
             window.alert("Please, enter an array of integers separated by spaces!");
         }
-
-    }
 }
 
-// function getMultiply(total, num) {
-//     return parseFloat(total) * parseFloat(num);
-// }
 function multiply(numberArray) {
 
-    var res = numberArray.split(" ");
-    var product = 1;
-    if (res.length >= 2) {
+    var res = numberArray.trim().split("");
+    var product=1;
+    if (res.length >= 1) {
         for(var i=0; i<res.length; i++){
-            product =product*res[i];
+            product =parseInt(product)*parseInt(res[i]);
         }
         window.alert("The total product is : " + product);
-
-    } else {
-        if (res.length == 1) {
-            window.alert("The product is : " + res[0].trim());
-        } else {
+    }else
+        {
             window.alert("Please, enter an array of integers separated by spaces!");
         }
-
-    }
 }
 
 function reverse(enteredString){
