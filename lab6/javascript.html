@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript basic</title>
+    <script type="text/javascript" src="js/lab6.js">
+
+    </script>
+</head>
+<body>
+    <h4>To find max of two numbers</h4>
+    <hr color="cyan">
+    <br>
+    <div class="form-group">
+        <label for="N1">First Number:</label>
+        <input type="number"  name="num1" id="N1" pattern="[0-9]" data-bind="value:N1"/>
+    </div>
+    <div class="form-group">
+        <label for="N2">Second Number:</label>
+        <input type="number" name="num2" id="N2" pattern="[0-9]" data-bind="value:N2"/>
+    </div>
+    <hr color="cyan">
+    <button onclick="max2Numbers(document.getElementById('N1').value,document.getElementById('N2').value)">Ok</button>
+
+
+<h4>To find max of three numbers</h4>
+    <hr color="cyan">
+    <br>
+    <div class="form-group">
+        <label for="N3">First Number:</label>
+        <input type="number" id="N3" pattern="[0-9]" data-bind="value:N3"/>
+    </div>
+    <div class="form-group">
+        <label for="N4">Second Number:</label>
+        <input type="number" id="N4" pattern="[0-9]" data-bind="value:N4"/>
+    </div>
+    <div class="form-group4">
+        <label for="N5">Third Number:</label>
+        <input type="number" id="N5" pattern="[0-9]" data-bind="value:N5"/>
+    </div>
+    <hr color="cyan">
+    <button onclick="max3Numbers(document.getElementById('N3').value,document.getElementById('N4').value,document.getElementById('N5').value)">OK</button>
+
+<h4>To find whether alpahabet is vowel or not using fucntion</h4>
+    <hr color="cyan">
+    <br>
+    <div class="form-group4">
+        <label for="alphabet">Enter a alphabet to check vowel or consonant:</label>
+        <input type="text" id="alphabet" data-bind="value:alphabet"/>
+    </div>
+    <hr color="cyan">
+    <button onclick="alphabetVowel(document.getElementById('alphabet').value)">OK</button>
+
+<h4>To find sum and multiply of a numbers using fucntion</h4>
+
+    <hr color="cyan">
+    <br>
+    <form action="sum(document.getElementById('alphabet'))">
+      <div>
+        <label for="nu1">Number 1:</label>
+        <input type="number" name="nu1" id="nu1" size="12" /><br>
+        <label for="nu2">Number 2:</label>
+        <input type="number" name="nu2" id="nu2" size="12" /><br>
+        <label for="nu3">Number 3:</label>
+        <input type="number" name="nu3" id="nu3" size="12" /><br>
+        <label for="nu4">Number 4:</label>
+        <input type="number" name="nu4" id="nu4" size="12" /><br>
+        <label for="nu5">Number 5:</label>
+        <input type="number" name="nu5" id="nu5" size="12" /><br>
+          <label for="nu6">Number 6:</label>
+          <input type="number" name="nu6" id="nu6" size="12" /><br>
+        <input type="submit" name="submit" value="Submit" />
+      </div>
+    </form>
+    <hr color="cyan">
+
+    <h4>To find a reverse of a string using fucntion</h4>
+<h4>To find longest word from an array using fucntion</h4>
+<h4>To filter all long words as per user using function</h4>
+<h4>Modify the jsfiddle on the map/filter/reduce slide </h4>
+
+<script type="text/javascript" src="js/lab6.js">
+</script>
+</body>
+</html>
