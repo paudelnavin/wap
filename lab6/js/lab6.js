@@ -27,7 +27,7 @@ function max3Numbers(num3, num4, num5)
 function alphabetVowel(alphabet) {
 
     var argument = alphabet.toLowerCase();
-        if (argument === 'a'||'e'||'i'||'o'||'u') {
+        if (argument == "a"||argument =="e"||argument =="i"||argument =="o"||argument =="u") {
             window.alert(alphabet + " is a vowel");
         }else {
             window.alert(alphabet + " is a consonant");
