@@ -35,23 +35,23 @@ function isVowel(char) {
             }
 }
 
-// function getSum(total, num) {
-//     return parseFloat(total) + parseFloat(num);
-// }
+function getSum(total, num) {
+    return parseFloat(total) + parseFloat(num);
+}
 
 function sum(numberArray){
 
+    var res = numberArray.split(" ");
     var sum =0;
-    if (numberArray.length >= 2) {
-        result.className = "success";
-        for(var i=0; i<numberArray.length; i++){
-            sum =parseInt(sum)+parseInt(numberArray[i]);
+    if (res.length >= 2) {
+        for(var i=0; i<res.length; i++){
+            sum =parseInt(sum)+parseInt(res[i]);
         }
         window.alert("The sum is : " + sum);
 
     } else {
-        if (numberArray.length == 1) {
-            window.alert("The sum is : " + numberArray[0].trim());
+        if (res.length == 1) {
+            window.alert("The sum is : " + res[0].trim());
         } else {
             window.alert("Please, enter an array of integers separated by spaces!");
         }
@@ -64,16 +64,17 @@ function sum(numberArray){
 // }
 function multiply(numberArray) {
 
+    var res = numberArray.split(" ");
     var product = 1;
-    if (numberArray.length >= 2) {
-        for(var i=0; i<numberArray.length; i++){
-            product =product*numberArray[i];
+    if (res.length >= 2) {
+        for(var i=0; i<res.length; i++){
+            product =product*res[i];
         }
         window.alert("The total product is : " + product);
 
     } else {
-        if (numberArray.length == 1) {
-            window.alert("The product is : " + numberArray[0].trim());
+        if (res.length == 1) {
+            window.alert("The product is : " + res[0].trim());
         } else {
             window.alert("Please, enter an array of integers separated by spaces!");
         }
