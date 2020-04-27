@@ -41,7 +41,6 @@ function isVowel(char) {
 
 function sum(numberArray){
 
-    const result = document.getElementById("sumArrayResult");
     var sum =0;
     if (numberArray.length >= 2) {
         result.className = "success";
@@ -49,42 +48,34 @@ function sum(numberArray){
             sum =parseInt(sum)+parseInt(numberArray[i]);
         }
         window.alert("The sum is : " + sum);
-        // result.innerText = "The sum is : " + enteredArray.reduce(getSum, 0);
 
     } else {
         if (numberArray.length == 1) {
-            result.className = "success";
             window.alert("The sum is : " + numberArray[0].trim());
-            // result.innerText = "The sum is : " + enteredArray[0].trim();
         } else {
-            result.className = "failed";
             window.alert("Please, enter an array of integers separated by spaces!");
-            // result.innerText = "Please, enter an array of integers separated by spaces!";
         }
 
     }
 }
 
+// function getMultiply(total, num) {
+//     return parseFloat(total) * parseFloat(num);
+// }
 function multiply(numberArray) {
-    const result = document.getElementById("multiplyArrayResult");
+
     var product = 1;
     if (numberArray.length >= 2) {
-        result.className = "success";
         for(var i=0; i<numberArray.length; i++){
             product =product*numberArray[i];
         }
         window.alert("The total product is : " + product);
-        // result.innerText = "The sum is : " + enteredArray.reduce(getSum, 0);
 
     } else {
         if (numberArray.length == 1) {
-            result.className = "success";
             window.alert("The product is : " + numberArray[0].trim());
-            // result.innerText = "The sum is : " + enteredArray[0].trim();
         } else {
-            result.className = "failed";
             window.alert("Please, enter an array of integers separated by spaces!");
-            // result.innerText = "Please, enter an array of integers separated by spaces!";
         }
 
     }
@@ -108,12 +99,12 @@ function reverse(enteredString){
     }
 }
 
-function getBigger(big, num) {
-    if (parseFloat(num) > parseFloat(big))
-        return parseFloat(num);
-    else
-        return parseFloat(big);
-}
+// function getBigger(big, num) {
+//     if (parseFloat(num) > parseFloat(big))
+//         return parseFloat(num);
+//     else
+//         return parseFloat(big);
+// }
 
 function longestWord(enteredString) {
 
@@ -140,20 +131,23 @@ function longestWord(enteredString) {
 }
 
 function filterWords(enteredString, x){
-    if (enteredString.length >= 1 && enteredi.trim() !== "") {
+    if (enteredString.length >= 1 && x.trim() !== "") {
         var str = [];
         for(var i = 0; i < enteredString.length; i++)
         {
-            if(enteredString[i].length >= x){
-                str.push(enteredString[i]);
+            if(enteredString[i].length > x){
+                str[str.length] = enteredString[i];
             }
         }
-        window.alert("The words are : " + str);
-        // result.innerText = "The words are : " + enteredString.filter(x => wordLongerThan(x, enteredi)).toString();
+        text = "";
+        for (i = 0; i < str.length; i++) {
+            text += fruits[i] + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+        // window.alert("The words are : " + str);
 
     } else {
         window.alert("Please, enter an array of words separated by spaces!");
-        // result.innerText = "Please, enter an array of words separated by spaces!";
     }
 }
 
@@ -208,3 +202,4 @@ console.assert(d3 === 0, {"findIndex elem > 1": 2, errorMsg: "failed! should equ
 function wordLongerThan(x, enteredi) {
     return (x.length > parseInt(enteredi));
 }
+s
