@@ -2,134 +2,213 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Javascript basic</title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="css/lab6.css" rel="stylesheet">
     <script type="text/javascript" src="js/lab6.js">
 
     </script>
+    <title>JS Basics</title>
 </head>
+<h1 class="card-header">Basic JavaScript examples</h1>
+<br>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <form>
+            <label class="card-title">1. The max value of two numbers. </label>
+            <br>
+            <div class="form-group">
+                <label>First number : </label>
+                <input class="form-control" id="Number1" placeholder="i.e. 1"  required type="number">
+            </div>
+            <div class="form-group">
+                <label>Second number : </label>
+                <input class="form-control" id="Number2" placeholder="i.e. 2" required type="number">
+            </div>
+            <hr color="cyan">
+            <button onclick="maxOf2Numbers(document.getElementById('Number1').value,document.getElementById('Number2').value)">Result</button>
+        </form>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <form>
+            <label class="card-title">2. The max value of three numbers. </label>
+            <br>
+            <div class="form-group">
+                <label>First number : </label>
+                <input class="form-control" id="Number3" placeholder="i.e. 1"  required type="number">
+
+            </div>
+            <div class="form-group">
+                <label>Second number : </label>
+                <input class="form-control" id="Number4" placeholder="i.e. 2" required type="number">
+            </div>
+
+            <div class="form-group">
+                <label>Third number : </label>
+                <input class="form-control" id="Number5" placeholder="i.e. 3" required type="number">
+            </div>
+
+            <hr color="cyan">
+            <button onclick="maxOf3Numbers(document.getElementById('Number3').value,document.getElementById('Number4').value,document.getElementById('Number5').value)">Result</button>
+        </form>
+
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <form>
+            <label class="card-title">3. Check for vowel Chars. </label>
+            <br>
+            <div class="form-group">
+                <label>Enter a Char : </label>
+                <input class="form-control" id="checkForVowel" maxlength="1" placeholder="i.e. A"  required type="text">
+            </div>
+            <hr color="cyan">
+            <button onclick="isVowel(document.getElementById('checkForVowel').value)">Result</button>
+        </form>
+
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <form>
+            <label class="card-title">4. Calculate the array summation. </label>
+            <br>
+            <div class="form-group">
+                <label>Enter an array separated by spaces : </label>
+                <input class="form-control" id="sumArrayInput" placeholder="1 2 3 4 5 6 7 "  required type="text">
+            </div>
+            <hr color="cyan">
+            <button onclick="sum(document.getElementById('sumArrayInput').value)">ADD</button>
+            <br>
+            <label class="align-middle" id ="sumArrayResult" ></label>
+
+        </form>
+
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<hr>
+
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <form>
+            <label class="card-title">5. Calculate the array multiplication. </label>
+            <br>
+            <div class="form-group">
+                <label>Enter an array separated by spaces : </label>
+                <input class="form-control" id="multiplyArrayInput" placeholder="1 2 3 4 5 6 7 "  required type="text">
+            </div>
+            <hr color="cyan">
+            <button onclick="multiply(document.getElementById('multiplyArrayInput').value)">Multiply</button>
+            <br>
+            <label class="align-middle" id ="multiplyArrayResult" ></label>
+
+        </form>
+
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<hr>
+
+
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <form>
+            <label class="card-title">6. Reverse a string. </label>
+            <br>
+            <div class="form-group">
+                <label>Enter an array separated by spaces : </label>
+                <input class="form-control" id="reverseInput" placeholder="Hello World!"  required type="text">
+            </div>
+            <hr color="cyan">
+            <p id="result1"></p>
+            <button onclick="reverse(document.getElementById('reverseInput').value)">Reverse</button>
+        </form>
+
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<hr>
+
+
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <form>
+            <label class="card-title">7. Find longest word. </label>
+            <br>
+            <div class="form-group">
+                <label>Enter an array separated by spaces : </label>
+                <input class="form-control" id="findLongestWordInput" placeholder="I am an array of strings"  required type="text">
+            </div>
+            <hr color="cyan">
+            <p id="result2"></p>
+            <button onclick="document.getElementById('filterLongWordsInput').innerHTML=longestWord()">Longest word</button>
+            <br>
+            <label class="align-middle" id ="findLongestWordResult" ></label>
+
+        </form>
+
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<hr>
+
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <form>
+            <label class="card-title">8. Filter words longer than i. </label>
+            <br>
+            <div class="form-group">
+                <label>Enter an array separated by spaces : </label>
+                <input class="form-control" id="filterLongWordsInput" placeholder="I am an array of strings"  required type="text">
+            </div>
+            <div class="form-group">
+                <label>Words longer than i, Enter i : </label>
+                <input class="form-control" id="ifilterLongWordsInput" placeholder="i.e. 3"  required type="text">
+            </div>
+            <hr color="cyan">
+            <button onclick="filterWords(document.getElementById('filterLongWordsInput').value, document.getElementById('ifilterLongWordsInput').value)">Filter words</button>
+        </form>
+
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<hr>
+
+<label class="card-title ml-9">9. The map/filter/reduce. [Open the console] </label>
+<hr>
+<label class="card-title ml-9">Note : notice the console.assert usage form the console. </label>
+
+
+
+
 <body>
-    <h4>To find max of two numbers</h4>
-    <hr color="cyan">
-    <br>
-    <div class="form-group">
-        <label for="N1">First Number:</label>
-        <input type="number"  name="num1" id="N1" pattern="[0-9]" data-bind="value:N1"/>
-    </div>
-    <div class="form-group">
-        <label for="N2">Second Number:</label>
-        <input type="number" name="num2" id="N2" pattern="[0-9]" data-bind="value:N2"/>
-    </div>
-    <hr color="cyan">
-    <button onclick="max2Numbers(document.getElementById('N1').value,document.getElementById('N2').value)">Ok</button>
 
 
-<h4>To find max of three numbers</h4>
-    <hr color="cyan">
-    <br>
-    <div class="form-group">
-        <label for="N3">First Number:</label>
-        <input type="number" id="N3" pattern="[0-9]" data-bind="value:N3"/>
-    </div>
-    <div class="form-group">
-        <label for="N4">Second Number:</label>
-        <input type="number" id="N4" pattern="[0-9]" data-bind="value:N4"/>
-    </div>
-    <div class="form-group4">
-        <label for="N5">Third Number:</label>
-        <input type="number" id="N5" pattern="[0-9]" data-bind="value:N5"/>
-    </div>
-    <hr color="cyan">
-    <button onclick="max3Numbers(document.getElementById('N3').value,document.getElementById('N4').value,document.getElementById('N5').value)">OK</button>
+<!-- Adding JS files at the end of HTML page to load faster according to UI/UX  -->
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="script.js" type="text/javascript"></script>
 
-<h4>To find whether alpahabet is vowel or not using fucntion</h4>
-    <hr color="cyan">
-    <br>
-    <div class="form-group4">
-        <label for="alphabet">Enter a alphabet to check vowel or consonant:</label>
-        <input type="text" id="alphabet" data-bind="value:alphabet"/>
-    </div>
-    <hr color="cyan">
-    <button onclick="alphabetVowel(document.getElementById('alphabet').value)">OK</button>
-
-<h4>To find sum and multiply of a numbers using fucntion</h4>
-
-    <hr color="cyan">
-    <br>
-      <div>
-        <label for="nu1">Number 1:</label>
-        <input type="number" name="nu1" id="nu1" size="12" /><br>
-        <label for="nu2">Number 2:</label>
-        <input type="number" name="nu2" id="nu2" size="12" /><br>
-        <label for="nu3">Number 3:</label>
-        <input type="number" name="nu3" id="nu3" size="12" /><br>
-        <label for="nu4">Number 4:</label>
-        <input type="number" name="nu4" id="nu4" size="12" /><br>
-        <label for="nu5">Number 5:</label>
-        <input type="number" name="nu5" id="nu5" size="12" /><br>
-        <label for="nu6">Number 6:</label>
-        <input type="number" name="nu6" id="nu6" size="12" /><br>
-      </div>
-    <hr color="cyan">
-    <p id="result"></p>
-    <button onclick="document.getElementById('result').innerHTML=sum()">ADD</button>
-    <button onclick="document.getElementById('result').innerHTML=multiply()">Multiply</button>
-
-    <h4>To find a reverse of a string using fucntion</h4>
-    <hr color="cyan">
-    <br>
-    <div class="form-group4">
-        <label for="string">Enter a string to reverse:</label>
-        <input type="text" id="string" data-bind="value:string"/>
-    </div>
-    <hr color="cyan">
-    <p id="result1"></p>
-    <button onclick="reverse(document.getElementById('result1').value)">Reverse</button>
-
-    <h4>To find longest word from an array using fucntion</h4>
-    <hr color="cyan">
-    <br>
-    <div>
-        <label for="str1">String 1:</label>
-        <input type="text" name="str1" id="str1" size="12" /><br>
-        <label for="str2">String 2:</label>
-        <input type="text" name="str2" id="str2" size="12" /><br>
-        <label for="str3">String 3:</label>
-        <input type="text" name="str3" id="str3" size="12" /><br>
-        <label for="str4">String 4:</label>
-        <input type="text" name="str4" id="str4" size="12" /><br>
-        <label for="str5">String 5:</label>
-        <input type="text" name="str5" id="str5" size="12" /><br>
-        <label for="str6">String 6:</label>
-        <input type="text" name="str6" id="str6" size="12" /><br>
-    </div>
-    <hr color="cyan">
-    <p id="result2"></p>
-    <button onclick="document.getElementById('result2').innerHTML=longestWord()">Longest word</button>
-
-    <h4>To filter all long words as per user using function</h4>
-    <hr color="cyan">
-    <br>
-    <div>
-        <label for="str7">String 1:</label>
-        <input type="text" name="str7" id="str7" size="12" /><br>
-        <label for="str8">String 2:</label>
-        <input type="text" name="str8" id="str8" size="12" /><br>
-        <label for="str9">String 3:</label>
-        <input type="text" name="str9" id="str9" size="12" /><br>
-        <label for="str10">String 4:</label>
-        <input type="text" name="str10" id="str10" size="12" /><br>
-        <label for="str11">String 5:</label>
-        <input type="text" name="str11" id="str11" size="12" /><br>
-        <label for="str12">String 6:</label>
-        <input type="text" name="str12" id="str12" size="12" /><br>
-    </div>
-    <hr color="cyan">
-    <p id="result3"></p>
-    <button onclick="document.getElementById('result3').innerHTML=totalStringsGreater()">Longest words array</button>
-
-    <h4>Modify the jsfiddle on the map/filter/reduce slide </h4>
-
-<script type="text/javascript" src="js/lab6.js">
-</script>
 </body>
 </html>

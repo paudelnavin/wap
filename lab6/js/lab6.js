@@ -1,114 +1,158 @@
-function max2Numbers(num1, num2)
+function maxOf(num1, num2) {
+    return Math.max(parseFloat(num1), parseFloat(num2));
+}
+
+function maxOf2Numbers(num1, num2)
 {
-    if(num1>num2)
-    {
-        window.alert(num1+"-is greatest");
+    if (num1.trim().toString() !== "" && num2.trim().toString() !== "") {
+        const max = maxOf(num1, num2);
+        window.alert("The max number is : " + max);
+    } else {
+        window.alert("Please, enter two numbers!");
     }
+}
+
+function maxOf3Numbers(num3, num4, num5)
+{
+    if (num3.trim().toString() !== "" && num4.trim().toString() !== "" && num5.trim().toString() !== "") {
+        const max = maxOf(num3, maxOf(num4, num5));
+        window.alert("The max number is : " + max);
+    } else {
+        window.alert("Please, enter three numbers!");
+    }
+}
+function isVowel(char) {
+
+    var argument = char.toLowerCase();
+            if (char.trim().toString() !== "") {
+                if (argument == "a"||argument =="e"||argument =="i"||argument =="o"||argument =="u") {
+                    window.alert("The '" + char + "' is a vowel.");
+                } else {
+                    window.alert("The '" + char + "' is NOT a vowel.");
+                }
+            } else {
+                window.alert("Please, enter a Char!");
+            }
+}
+
+// function getSum(total, num) {
+//     return parseFloat(total) + parseFloat(num);
+// }
+
+function sum(numberArray){
+
+    const result = document.getElementById("sumArrayResult");
+    var sum =0;
+    if (numberArray.length >= 2) {
+        result.className = "success";
+        for(var i=0; i<numberArray.length; i++){
+            sum =parseInt(sum)+parseInt(numberArray[i]);
+        }
+        window.alert("The sum is : " + sum);
+        // result.innerText = "The sum is : " + enteredArray.reduce(getSum, 0);
+
+    } else {
+        if (numberArray.length == 1) {
+            result.className = "success";
+            window.alert("The sum is : " + numberArray[0].trim());
+            // result.innerText = "The sum is : " + enteredArray[0].trim();
+        } else {
+            result.className = "failed";
+            window.alert("Please, enter an array of integers separated by spaces!");
+            // result.innerText = "Please, enter an array of integers separated by spaces!";
+        }
+
+    }
+}
+
+function multiply(numberArray) {
+    const result = document.getElementById("multiplyArrayResult");
+    var product = 1;
+    if (numberArray.length >= 2) {
+        result.className = "success";
+        for(var i=0; i<numberArray.length; i++){
+            product =product*numberArray[i];
+        }
+        window.alert("The total product is : " + product);
+        // result.innerText = "The sum is : " + enteredArray.reduce(getSum, 0);
+
+    } else {
+        if (numberArray.length == 1) {
+            result.className = "success";
+            window.alert("The product is : " + numberArray[0].trim());
+            // result.innerText = "The sum is : " + enteredArray[0].trim();
+        } else {
+            result.className = "failed";
+            window.alert("Please, enter an array of integers separated by spaces!");
+            // result.innerText = "Please, enter an array of integers separated by spaces!";
+        }
+
+    }
+}
+
+function reverse(enteredString){
+
+    if (enteredString.length >= 2) {
+        window.alert("The reverse of " + enteredString + " is : " + enteredString.split("").reverse().join(""));
+        // result.innerText = "The reverse of " + enteredString + " is : " + enteredString.split("").reverse().join("");
+
+    } else {
+        if (enteredString.length == 1) {
+            window.alert("The reverse is : " + enteredString.trim());
+            // result.innerText = "The reverse is : " + enteredString.trim();
+        } else {
+            window.alert("Please, enter any string!");
+            // result.innerText = "Please, enter any string!";
+        }
+
+    }
+}
+
+function getBigger(big, num) {
+    if (parseFloat(num) > parseFloat(big))
+        return parseFloat(num);
     else
-    {
-        window.alert(num2+"-is greatest");
-    }
+        return parseFloat(big);
 }
 
-function max3Numbers(num3, num4, num5)
-{
-    if(num3>num4 && num3>num5)
-    {
-        window.alert(num3+"-is greatest");
-    }
-    else if (num4>num3 && num4>num5)
-    {
-        window.alert(num4+"-is greatest");
-    }
-    else if (num5>num3 && num5>num4){
-        window.alert(num5+"-is greatest");
-    }
-}
-function alphabetVowel(alphabet) {
+function longestWord(enteredString) {
 
-    var argument = alphabet.toLowerCase();
-        if (argument == "a"||argument =="e"||argument =="i"||argument =="o"||argument =="u") {
-            window.alert(alphabet + " is a vowel");
-        }else {
-            window.alert(alphabet + " is a consonant");
+    const result = document.getElementById("findLongestWordResult");
+    if (enteredString.length >= 1) {
+        const results = enteredString.map(x => x.length);
+        result.className = "success";
+        var index = 0;
+        var elementLength = enteredString[0].length;
+        for(var i=1; i< enteredString.length; i++) {
+            if(enteredString[i].length > elementLength) {
+                index = i;
+                elementLength = enteredString[i].length;
+            }
         }
-}
+        window.alert("The longest word is  " + enteredString[index]);
+        // result.innerText = "The longest word is  " + results.reduce(getBigger, results[0]);
 
-function sum(){
-    const num1 = document.getElementById("nu1").value;
-    const num2 = document.getElementById("nu2").value;
-    const num3 = document.getElementById("nu3").value;
-    const num4 = document.getElementById("nu4").value;
-    const num5 = document.getElementById("nu5").value;
-    const num6 = document.getElementById("nu6").value;
-    var number = [num1,num2,num3,num4,num5,num6];
-    var sum=0;
-    for(var i=0; i<number.length; i++){
-        sum =sum+number[i];
+    } else {
+        result.className = "failed";
+        window.alert("Please, enter an array of words separated by spaces!");
+        // result.innerText = "Please, enter an array of words separated by spaces!";
     }
-    window.alert(sum);
 }
 
-function multiply() {
-    const num1 = document.getElementById("nu1").value;
-    const num2 = document.getElementById("nu2").value;
-    const num3 = document.getElementById("nu3").value;
-    const num4 = document.getElementById("nu4").value;
-    const num5 = document.getElementById("nu5").value;
-    const num6 = document.getElementById("nu6").value;
-    var number = [num1,num2,num3,num4,num5,num6];
-    var product=1;
-    for(var i=0; i<number.length; i++){
-        product =product*number[i];
-    }
-    window.alert("Product of numbers is "+product);
-}
-
-function reverse(string){
-    var str = [];
-    for(var i=string.length;i>=0;--i){
-        str.push(string[i]);
-    }
-        window.alert("Reverse string is "+str);
-
-}
-
-function longestWord() {
-    const string1 = document.getElementById("str1").value;
-    const string2 = document.getElementById("str2").value;
-    const string3 = document.getElementById("str3").value;
-    const string4 = document.getElementById("str4").value;
-    const string5 = document.getElementById("str5").value;
-    const string6 = document.getElementById("str6").value;
-    var  strings = [string1,string2,string3,string4,string5,string6];
-
-    var index = 0;
-    var elementLength = strings[0].length;
-    for(var i=1; i< strings.length; i++) {
-        if(strings[i].length > elementLength) {
-            index = i;
-            elementLength = strings[i].length;
+function filterWords(enteredString, x){
+    if (enteredString.length >= 1 && enteredi.trim() !== "") {
+        var str = [];
+        for(var i = 0; i < enteredString.length; i++)
+        {
+            if(enteredString[i].length >= x){
+                str.push(enteredString[i]);
+            }
         }
-    }
-    window.alert(strings[index]);
-}
+        window.alert("The words are : " + str);
+        // result.innerText = "The words are : " + enteredString.filter(x => wordLongerThan(x, enteredi)).toString();
 
-function totalStringsGreater(){
-    const string1 = document.getElementById("str1").value;
-    const string2 = document.getElementById("str2").value;
-    const string3 = document.getElementById("str3").value;
-    const string4 = document.getElementById("str4").value;
-    const string5 = document.getElementById("str5").value;
-    const string6 = document.getElementById("str6").value;
-    var  strings = [string1,string2,string3,string4,string5,string6];
-
-    var j = 6;
-    var str = [];
-    for(var i = 0; i < strings.length; i++)
-    {
-        if(strings[i].length >= j){
-            str.push("avin");
-        }
+    } else {
+        window.alert("Please, enter an array of words separated by spaces!");
+        // result.innerText = "Please, enter an array of words separated by spaces!";
     }
-    window.alert(str);
 }
