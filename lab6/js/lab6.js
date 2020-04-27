@@ -98,23 +98,21 @@ function longestWord(enteredString) {
 }
 
 function filterWords(enteredString, x){
-    if (enteredString.length >= 1 && x.trim() !== "") {
+
+    var res = enteredString.trim().split(" ");
+    console.log(x);
+    console.log(res);
+    if( x=="" || res==""){
+        window.alert("Please, enter an array of words separated by spaces! and enter i value too!");
+    }else{
         var str = [];
-        for(var i = 0; i < enteredString.length; i++)
+        for(var i = 0; i < res.length; i++)
         {
-            if(enteredString[i].length > x){
-                str[str.length] = enteredString[i];
+            if(res[i].length > x){
+                str.push(res[i]);
             }
         }
-        text = "";
-        for (i = 0; i < str.length; i++) {
-            text += fruits[i] + "<br>";
-        }
-        document.getElementById("demo").innerHTML = text;
-        // window.alert("The words are : " + str);
-
-    } else {
-        window.alert("Please, enter an array of words separated by spaces!");
+        window.alert("The word(s) longer than "+x+" are "+str);
     }
 }
 
