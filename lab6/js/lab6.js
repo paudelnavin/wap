@@ -39,29 +39,28 @@ function sum(numberArray){
 
     var res = numberArray.trim().split(" ");
     var sum =0;
-    if (res.length >= 1) {
+    if(res==""){
+        window.alert("Please, enter an array of integers separated by spaces!");
+    }else{
         for(var i=0; i<res.length; i++){
             sum =parseInt(sum)+parseInt(res[i]);
         }
         window.alert("The sum is : " + sum);
-    } else {
-            window.alert("Please, enter an array of integers separated by spaces!");
-        }
+    }
 }
 
 function multiply(numberArray) {
 
     var res = numberArray.trim().split(" ");
     var product=1;
-    if (res.length >= 1) {
+    if(res==""){
+        window.alert("Please, enter an array of integers separated by spaces!");
+    }else{
         for(var i=0; i<res.length; i++){
             product =parseInt(product)*parseInt(res[i]);
         }
         window.alert("The total product is : " + product);
-    }else
-        {
-            window.alert("Please, enter an array of integers separated by spaces!");
-        }
+    }
 }
 
 function reverse(enteredString){
