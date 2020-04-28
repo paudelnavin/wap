@@ -25,4 +25,21 @@ window.onload = function() {
             body.style.background = "";
         }
     }
+
+    document.getElementById("malkovitchBtn").onclick = function() {
+        const originalText = myTextArea.value;
+        let newText = "";
+        let nextWord = "";
+        for(let i = 0; i < originalText.length; ++i) {
+            let letter = originalText.substring(i, i+1);
+            nextWord += letter;
+            if(letter == ' ' || letter == '\n' || i >= originalText.length-1) {
+                if(nextWord.trim().length >= 5)
+                    nextWord = "Malkovitch ";
+                newText += nextWord;
+                nextWord = "";
+            }
+        }
+        myTextArea.value = newText;
+    };
 }
