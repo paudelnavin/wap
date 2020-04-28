@@ -42,4 +42,44 @@ window.onload = function() {
         }
         myTextArea.value = newText;
     };
+
+    document.getElementById("igpayAtinlayBtn").onclick = function() {
+        const originalText = myTextArea.value;
+        let newText = "";
+        let nextWord = "";
+        for(let i = 0; i < originalText.length; ++i) {
+            let letter = originalText.substring(i, i+1);
+            nextWord += letter;
+            if(letter == ' ' || letter == '\n' || i >= originalText.length-1) {
+                nextWord = pigLatinizeWord(nextWord)
+                newText += nextWord;
+                nextWord = "";
+            }
+        }
+        myTextArea.value = newText;
+    };
+
+    function pigLatinizeWord(word) {
+        const firstLetter = word.substring(0,1);
+
+        if(!checkIfVowel(firstLetter)) {
+            let consonantClusterSize = 1;
+            for(let i = 1; i < word.length; ++i) {
+                let letter = word.substring(i, i+1);
+                if(!checkIfVowel(letter)) {
+                    consonantClusterSize++;
+                } else {
+                    break;
+                }
+            }
+            word = word.substring(consonantClusterSize, word.length).trim() + word.substring(0,consonantClusterSize);
+        }
+        return word.trim() + "ay ";
+    }
+
+    function checkIfVowel(letter) {
+        const l = letter.toLowerCase();
+        return l == 'a' || l == 'e' ||
+            l == 'i' || l == 'o' || l == 'u';
+    }
 }
