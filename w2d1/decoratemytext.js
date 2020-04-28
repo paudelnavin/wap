@@ -18,10 +18,10 @@ window.onload = function() {
     document.getElementById("bling").onchange = function () {
         const body = document.body;
         if (this.checked == true) {
-            text.className = "bling-checked";
+            textarea.className = "bling-checked";
             body.style.background = "url('hundred-dollar-bill.jpg')";
         } else {
-            text.className = "bling-unchecked";
+            textarea.className = "bling-unchecked";
             body.style.background = "";
         }
     }
