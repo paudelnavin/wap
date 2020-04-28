@@ -79,16 +79,16 @@ function reverse(enteredString){
 
 function longestWord(enteredString) {
 
-
     var res = enteredString.trim().split(" ");
     console.log(res);
     if(res=="") {
         window.alert("Please, enter an array of words separated by spaces!");
     }else{
         var index = 0;
+        var str = [];
         var elementLength = res[0].length;
         for(var i=1; i< res.length; i++) {
-            if(res[i].length > elementLength) {
+            if(res[i].length >= elementLength) {
                 index = i;
                 elementLength = res[i].length;
             }

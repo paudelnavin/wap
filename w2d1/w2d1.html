@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>JS Basics using map/filter/reduce</title>
+</head>
+<body>
+<h1 class="card-header">Basic JavaScript examples</h1>
+<br>
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <form>
+            <label class="card-title">4. Calculate the array summation. </label>
+            <br>
+            <div class="form-group">
+                <label>Enter an array separated by spaces : </label>
+                <input class="form-control" id="sumArrayInput" placeholder="1 2 3 4 5 6 7 "  required type="text" pattern="[0-9]">
+            </div>
+            <hr color="cyan">
+            <div class="row">
+                <div class="col-md-4 col-lg-2">
+                    <button onclick="sumClick()">ADD</button>
+                </div>
+            </div>
+            <br>
+            <label class="align-middle" id ="max2Result" ></label>
+        </form>
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<hr>
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <form>
+            <label class="card-title">5. Calculate the array multiplication. </label>
+            <br>
+            <div class="form-group">
+                <label>Enter an array separated by spaces : </label>
+                <input class="form-control" id="multiplyArrayInput" placeholder="1 2 3 4 5 6 7 "  required type="text">
+            </div>
+            <hr color="cyan">
+            <button onclick="multiplyClick()">Multiply</button>
+        </form>
+
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<hr>
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <form>
+            <label class="card-title">6. Reverse a string. </label>
+            <br>
+            <div class="form-group">
+                <label>Enter an array separated by spaces : </label>
+                <input class="form-control" id="reverseInput" placeholder="Hello World!"  required type="text">
+            </div>
+            <hr color="cyan">
+            <p id="result1"></p>
+            <button onclick="reverseClick()">Reverse</button>
+        </form>
+
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<hr>
+
+
+<div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
+        <form>
+            <label class="card-title">7. Find longest word. </label>
+            <br>
+            <div class="form-group">
+                <label>Enter an array separated by spaces : </label>
+                <input class="form-control" id="findLongestWordInput" placeholder="I am an array of strings"  required type="text">
+            </div>
+            <hr color="cyan">
+            <p id="result2"></p>
+            <button onclick="longestWord()">Longest word</button>
+        </form>
+
+    </div>
+    <div class="col-md-2"></div>
+</div>
+<hr>
+
+<!-- Adding JS files at the end of HTML page to load faster according to UI/UX  -->
+<script type="text/javascript" src="w2d1.js"></script>
+</body>
+</html>
