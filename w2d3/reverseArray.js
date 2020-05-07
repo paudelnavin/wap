@@ -28,10 +28,9 @@
                  value = list.value;
                  rest = list.rest;
             });
-
             return list;
 
-
+            
             },
         listToArray: function () {
 
@@ -148,3 +147,4 @@
         });
     });
 })();
+
