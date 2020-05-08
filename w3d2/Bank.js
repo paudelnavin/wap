@@ -48,10 +48,6 @@ class Bank{
 
 }
 
-
-
-
-
 describe("Bank Accounts Test", function () {
 
     context("Testing the methods on the bank class: ", function () {
